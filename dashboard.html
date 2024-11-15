@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard - My Digital Gallery</title>
+    <link rel="stylesheet" href="assets/styles/style.css">
+</head>
+<body style="background-image: url('assets/images/nature-background.jpg'); background-size: cover;">
+    <div class="dashboard-container">
+        <header>
+            <h1>Welcome to Your Digital Gallery</h1>
+            <button onclick="window.location.href='logout.php'">Logout</button>
+        </header>
+        
+        <!-- Profile Image Section -->
+        <div class="profile-section">
+            <img id="profile-img" src="assets/images/default-profile.jpg" alt="Profile Picture">
+            <input type="file" id="upload-img" accept="image/*" onchange="uploadProfileImage()">
+        </div>
+
+        <!-- Personal Data Section -->
+        <div class="personal-data">
+            <h2>Your Personal Data</h2>
+            <ul>
+                <li>Name: <span id="name">John Doe</span></li>
+                <li>Age: <span id="age">25</span></li>
+                <li>Phone No: <span id="phone">123-456-7890</span></li>
+                <li>Email: <span id="email">johndoe@example.com</span></li>
+                <li>LinkedIn: <span id="linkedin"><a href="https://www.linkedin.com/in/johndoe">johndoe</a></span></li>
+                <li>GitHub: <span id="github"><a href="https://github.com/johndoe">johndoe</a></span></li>
+                <li>Address: <span id="address">123 Main St, City, Country</span></li>
+            </ul>
+            <button onclick="editData()">Edit</button>
+            <button onclick="deleteData()">Delete</button>
+        </div>
+
+        <!-- Folders Section -->
+        <div class="folders-section">
+            <h3>Your Folders</h3>
+            <div class="folder">
+                <h4>Certificates</h4>
+                <button>Upload Files</button>
+                <button>Delete Folder</button>
+            </div>
+            <div class="folder">
+                <h4>Documents</h4>
+                <button>Upload Files</button>
+                <button>Delete Folder</button>
+            </div>
+            <div class="folder">
+                <h4>Pics & Videos</h4>
+                <button>Upload Files</button>
+                <button>Delete Folder</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="assets/scripts/script.js"></script>
+</body>
+</html>
